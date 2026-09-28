@@ -23,11 +23,11 @@
   const isRain=kind=>kind==='rain'||kind==='heavyRain';
   const worldGap=()=>WORLD_RULES.minGapMs+Math.floor(Math.random()*(WORLD_RULES.maxGapMs-WORLD_RULES.minGapMs));
   const HOUR=60*60*1000;
-  const KEY = 'word-forest-student-v1';
+  const KEY = 'word-forest-v1';
   let activeForest=0;
   const FORESTS=[{name:'초록빛 숲',grades:'1~3급',start:1},{name:'살구빛 숲',grades:'4~6급',start:4},{name:'보랏빛 숲',grades:'7~9급',start:7}];
   const forestKey=i=>i===0?KEY:KEY+'-forest-'+i;
-  const STUDENT_BG = 'assets/garden.svg';
+  const STUDENT_BG = '';
   // HSK grade and character level are independent. Costs continue beyond Lv.10.
   const XP_MULTIPLIERS=[1,1.5,2];
   const xpNeeded = (level,forest=activeForest) => (100 + 50*(level-1) + 10*(level-1)**2)*XP_MULTIPLIERS[forest];
